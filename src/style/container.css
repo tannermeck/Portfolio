@@ -1,4 +1,4 @@
-.loader {
+/* .loader {
     min-height: 100vh;
     background-color: #0B132B;
     font-family:monospace
@@ -17,9 +17,9 @@ h1::before {
     left: 0;
     width: 0;
     height: 100%;
-    color: #1C2541;
+    color: black;
     -webkit-text-stroke: 0vw black;
-    border-right: 2px solid #1C2541;
+    border-right: 2px solid black;
     overflow: hidden;
     animation: animate 6s linear infinite;
 }
@@ -31,4 +31,26 @@ h1::before {
     {
         width: 100%;
     }
+} */
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    animation: flyin 1.2s ease forwards;
+    opacity: 0;
+    transform: scale(2);
+    filter: blur(4px);
+    color: white;
+    font-size: 4rem;
+  }
+  @keyframes flyin {
+     to { 
+       filter: blur(0);
+       transform: scale(1);
+       opacity: 1;
+     }
+  }
+.heading {
+    color: white;
 }

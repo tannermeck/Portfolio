@@ -3,18 +3,23 @@ import style from '../style/container.css';
 
 class Home extends Component {
     state = {
-        loading: false,
+        loading: true,
     }
     componentDidMount() {
-        this.setState({loading: true})
+        setTimeout(() => {
+        this.setState({loading: false})
+         }, 2500);
+        //  this.setState({loading: false})
     }
 
     render(){
         const { loading } = this.state;
-        if (loading) return <h1 data-text="Tanner Meck..." className={style.loader}>Tanner Meck...</h1>
+        if (loading) return <h1 data-text="Tanner Meck..." className={style.loader}>{`{ Tanner Meck }`}</h1>
         return (
             <>
-                <h1>Tanner</h1>
+            {!this.state.loading &&
+                <h1 className={style.heading}>Welcome to my Portfolio</h1>
+            }
             </>
         )
     }
