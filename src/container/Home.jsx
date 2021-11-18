@@ -14,11 +14,11 @@ class Home extends Component {
 
     render(){
         const { loading } = this.state;
-        if (loading) return <h1 data-text="Tanner Meck..." className={style.loader}>Tanner Meck...</h1>
+        if (loading) return <h1 data-text="Tanner Meck" className={style.loader}>Tanner Meck</h1>
         return (
             <>
             {!this.state.loading &&
-                <h1 className={style.heading}>Welcome to my Portfolio</h1>
+                <h2 className={style.heading}>Welcome to my Portfolio</h2>
             }
             </>
         )
