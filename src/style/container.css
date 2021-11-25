@@ -1,19 +1,24 @@
 @import url("https://fonts.googleapis.com/css?family=Syncopate");
 .loader {
+    margin-top: 50px;
     min-height: 100vh;
     background-color: #0B132B;
     font-family: 'Syncopate', Helvetica, Arial;
+    width: 400px;
+    letter-spacing: 10px;
+    text-align: center;
 }
 h1 {
-    position: relative;
-    font-size: 11vw;
+    min-width: 100vw;
+    position: absolute;
+    font-size: 4rem;
     color: #0B132B;
     -webkit-text-stroke: 0.3vw #000000;
     text-transform: uppercase;
     }
 h1::before {
     content: attr(data-text);
-    position: absolute;
+    position:absolute;
     top: 0;
     left: 0;
     width: 0;
@@ -22,17 +27,27 @@ h1::before {
     -webkit-text-stroke: 0vw lightslategray;
     border-right: 2px solid lightslategray;
     overflow: hidden;
-    animation: animate 4s linear;
+    animation: animate 5s linear;
+    width: 400px;
+    letter-spacing: 10px;
+    text-align: center;
+    max-width: 100vw;
 }
 @keyframes animate {
     0%, 10%, 100% {
         width: 0;
     }
-    70%, 90%
-    {
+    70%, 90% {
         width: 100%;
     }
 }
+.heading {
+    color: white;
+}
+
+
+
+
 /* .loader {
     display: flex;
     justify-content: center;

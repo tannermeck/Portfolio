@@ -8,13 +8,13 @@ class Home extends Component {
     componentDidMount() {
         setTimeout(() => {
         this.setState({loading: false})
-         }, 4000);
+         }, 5000);
         //  this.setState({loading: false})
     }
 
     render(){
         const { loading } = this.state;
-        if (loading) return <h1 data-text="Tanner Meck" className={style.loader}>Tanner Meck</h1>
+        if (loading) return <h1 data-text="{Tanner Meck}" className={style.loader}>{`{Tanner Meck}`}</h1>
         return (
             <>
             {!this.state.loading &&
